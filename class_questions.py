@@ -73,6 +73,50 @@ def swap(string):
 # Driver Code
 swap("Python")
 
+# 5. Remove odd index value from a given string
+x = "0123456789"
+# x = input("Enter the string : ")
+even_list = []
+for i in x:
+    if (x.index(i))%2 == 0:
+        even_list.append(i)
+odd_removed_string = "".join(even_list)
+print(odd_removed_string)
+
+# In above problem we are using numbers as string for checking the result
+# if we put a string as input we will receive the characters of string at even values
+
+# Count the number of words in a string
+
+sentence = "Find the number of words in this sentence."
+def count_words(sentence):
+    words_list = sentence.split(' ')
+    print(len(words_list))
+count_words(sentence)
+
+# 6. Given a string in lower case change it to upper case
+
+string = "welcome"
+def change_to_upper(string):
+    upper_string = string.upper()
+    print(upper_string)
+
+change_to_upper(string)
+
+# 7. Given a string in upper case change it to lower case.
+
+string = "WELCOME"
+
+def change_to_lower(string):
+    lower_string = string.lower()
+    print(lower_string)
+
+change_to_lower(string)
+
+# 8.
+
+
+
 
 
 
