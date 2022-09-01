@@ -113,7 +113,21 @@ def change_to_lower(string):
 
 change_to_lower(string)
 
-# 8.
+# 8. Given a sting containing both upper and lower chars
+# change the upper case chars to lower case and lower case chars to upper case
+
+inp_string = "Virat"
+
+def change_case(inp_string):
+    case_changed_list = []
+    for i in inp_string:
+        if i.isupper():
+            case_changed_list.append(i.lower())
+        if i.islower():
+            case_changed_list.append(i.upper())
+    result_string = ''.join(case_changed_list)
+    print(result_string)
+change_case(inp_string)
 
 
 
