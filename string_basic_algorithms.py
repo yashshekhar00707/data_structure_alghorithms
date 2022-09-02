@@ -171,6 +171,82 @@ print(x.startswith(("Rahul", "I")))
 # If we wish to check whether the given string starts with "Rahul" or "I"
 # we can use multiple strings inside the paranthesis like in example above.
 
+# 11. Python program to set the indentation of the first line
+import textwrap
+sample_text ='''
+Python is a widely used high-level, general-purpose, interpreted, dynamic
+programming language. Its design philosophy emphasizes code readability,
+and its syntax allows programmers to express concepts in fewer lines of
+code than possible in languages such as C++ or Java.
+    '''
+
+text1 =  textwrap.dedent(sample_text).strip()
+print()
+print(textwrap.fill(text1,
+                    initial_indent='',
+                    subsequent_indent=' ' * 4,
+                    width=80,
+                    ))
+print()
+
+# 12. program to print the given floating number to 2 decimal places
+
+list_of_floating_numbers = [1.2334, 3.1121, 4.121212, 4.13121212, 2.121323]
+def round_to_2(num):
+    rounded_num = round(num, 2)
+    return rounded_num
+
+rounded_list = []
+for i in list_of_floating_numbers:
+    rounded_list.append(round_to_2(i))
+print(rounded_list)
+
+# 13. program to print the given floating numbers to 2 decimal places with a sign
+
+list1 = [1.22122, 3.132322, 4.1323242, 4.2323232]
+list2 = [3.324343, 4.23242233, 2.1132323, 10.212]
+result_list = []
+for (i,j) in zip(list1, list2):
+    ans = i-j
+    if ans >= 0:
+        ans_with_sign = '+' + str(ans)
+        result_list.append(ans_with_sign)
+    else:
+        result_list.append(ans)
+print(result_list)
+
+# 14. Program to print the numbers with comma separator
+list3 = [1000000000,200000000000,30000000]
+for i in list3:
+    print(f"{i:,}")
+
+# 15. To format a number with percentage in python
+list4 = [1,2,3,4]
+for i in list4:
+    print(f"{i:.0%}")
+
+# 16. To count occurrences of a substring in a string
+# or count repeated characters in a string
+inp_str = "the fox is considered to be the most clever animal amongst its class."
+split_line = inp_str.split(' ')
+count = 0
+for i in split_line:
+    if i == 'the':
+        count += 1
+print(count)
+
+# In the given string find the number of occurrences of substring "gh"
+inp_str2 = "ghkwhghswghedghrfgheddjdksjfhsdkjdkjgh"
+count = 0
+for i in inp_str2:
+    if (i == 'g') and (inp_str2[(inp_str2.index(i) + 1)] == "h"):
+        count += 1
+print(f"The count of 'gh' in the given string is {count}")
+
+# 17.
+
+
+
 
 
 
