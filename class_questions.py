@@ -127,8 +127,44 @@ def change_case(inp_string):
             case_changed_list.append(i.upper())
     result_string = ''.join(case_changed_list)
     print(result_string)
+
 change_case(inp_string)
 
+# 9. Removing a new line character from the string in Python
+# initialize list
+test_list = ['gf\ng', 'i\ns', 'b\nest', 'fo\nr', 'geeks\n']
+
+# printing original list
+print("The original list : " + str(test_list))
+
+# Removing newline character from string
+# using loop
+res = []
+for sub in test_list:
+    res.append(sub.replace("\n", ""))
+
+# printing result
+print("List after newline character removal : " + str(res))
+
+# 10. Program to check whether a string starts with specified characters
+
+text = "programming is easy"
+result = text.startswith(('python', 'programming'))
+
+# prints True
+print(result)
+
+result = text.startswith(('is', 'easy', 'java'))
+
+# prints False
+print(result)
+
+# With start and end parameter
+# 'is easy' string is checked
+result = text.startswith(('programming', 'easy'), 12, 19)
+
+# prints False
+print(result)
 
 
 
