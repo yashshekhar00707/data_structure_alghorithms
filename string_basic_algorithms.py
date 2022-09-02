@@ -166,6 +166,13 @@ result = text.startswith(('programming', 'easy'), 12, 19)
 # prints False
 print(result)
 
+x = "I am learning Python."
+print(x.startswith(("Rahul", "I")))
+# If we wish to check whether the given string starts with "Rahul" or "I"
+# we can use multiple strings inside the paranthesis like in example above.
+
+
+
 
 
 
