@@ -215,6 +215,7 @@ for (i,j) in zip(list1, list2):
         result_list.append(ans)
 print(result_list)
 
+
 # 14. Program to print the numbers with comma separator
 list3 = [1000000000,200000000000,30000000]
 for i in list3:
@@ -227,13 +228,19 @@ for i in list4:
 
 # 16. To count occurrences of a substring in a string
 # or count repeated characters in a string
+def count_sub_string(string, sub_string):
+    split_line = string.split(' ')
+    count = 0
+    for i in split_line:
+        if i == sub_string:
+            count += 1
+    print(count)
+
+
 inp_str = "the fox is considered to be the most clever animal amongst its class."
-split_line = inp_str.split(' ')
-count = 0
-for i in split_line:
-    if i == 'the':
-        count += 1
-print(count)
+sub_string = "the"
+count_sub_string(string, sub_string)
+
 
 # In the given string find the number of occurrences of substring "gh"
 inp_str2 = "ghkwhghswghedghrfgheddjdksjfhsdkjdkjgh"
@@ -243,10 +250,116 @@ for i in inp_str2:
         count += 1
 print(f"The count of 'gh' in the given string is {count}")
 
-# 17.
+# 17. print the index of character of the string
+def get_index(string, char):
+    print(string.index(char))
+string = "Welcome to NASA"
+char = "m"
+get_index(string, char)
+
+# 18 converting the string to list
+
+def list_converter(string):
+    list1 = []
+    for i in string:
+        list1.append(i)
+    print(list1)
+list_converter("Rakesh")
+
+# 19 swap comma and dot in a string
+def punc_swapper(string):
+    string = string.replace(',','x')
+    string = string.replace('.',',')
+    string = string.replace('x','.')
+    print(string)
+
+string = "123,12,1.23.45"
+punc_swapper(string)
+
+# 20 count and display the vowels of a given string
+
+def vowel_counter(string):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    count = 0
+    for i in string:
+        if i in vowels:
+            count += 1
+            print(i)
+    print(count)
+
+string = "Abhishek is a data scientist."
+vowel_counter(string)
+
+# 21 remove spaces from a given string
+
+def remove_string(string):
+    string = string.replace(' ','')
+    print(string)
+
+string = "We will be going to picnic tomorrow."
+remove_string(string)
+
+# 22 Move spaced to the front of a given string
+
+def move_spaces(string):
+    count = 0
+    for i in string:
+        if i == ' ':
+            count += 1
+    string.replace(' ','')
+    string = string + " "*count
+    print(string)
+
+string = "We live in Mumbai."
+move_spaces(string)
+
+# 23 Capitalize first and last character of each word in a given string
+
+def capitalize_first_and_last(string):
+    string = string.split(' ')
+    list1 = []
+    for x in string:
+        y = x[0].capitalize() + x[1:-1] + x[-1].capitalize()
+        list1.append(y)
+    result_string = ' '.join(list1)
+    print(result_string)
+
+string = "frpfrpl frplfprlf frplfprlf frplfpr frpflprlf lfprlf"
+capitalize_first_and_last(string)
+
+# 24 Removing leading zeros from an IP address
+
+def remove_zeros(IP):
+    print(IP.rstrip("0."))
+
+IP = "208.80. 154.224.000."
+remove_zeros(IP)
 
 
+# OOP practice
 
+class Item:
+    pay_rate = 0.8 # after applying 20% discount
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+    def calculate_total_price(self):
+        result = self.price * self.quantity
+        print(result)
+
+    def apply_discount(self):
+        self.price = self.price * self.pay_rate
+
+item1 = Item("Phone", 100, 5)
+item2 = Item("Laptop", 1000, 3)
+
+item1.apply_discount()
+print(item1.price)
+item2.pay_rate = 0.7
+item2.apply_discount()
+print(item2.price)
 
 
 
